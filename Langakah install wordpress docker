@@ -1,0 +1,14 @@
+===LANGKAH AWAL INSTALL WORDPRESS DOCKER===
+1.Install wordpress perintah "#docker pull wordpress"
+2.Install mysql database perintah "#docker pull mysql"
+3.Install phpmyadmin perintah "#docker pull phpmyadmin/phpmyadmin" (fungsi phpmyadmin adlah untuk mengelola database mariadb atau mysql)
+
+===CEK APAKAH SUDAH TERINSTALL DARI 3 TERSEBUT===
+1.perintah untuk cek REPOSITORY yang sudah teriinstall:
+          #docker images
+          root@DevOps:~# docker images
+          REPOSITORY              TAG       IMAGE ID       CREATED         SIZE
+          phpmyadmin/phpmyadmin   latest    164fff8f44b3   17 hours ago    565MB
+          mysql                   latest    c5c247418d4e   20 hours ago    604MB
+          wordpress               latest    c012b71a41fc   2 months ago    701MB
+===LANJUT===
