@@ -11,4 +11,34 @@
           phpmyadmin/phpmyadmin   latest    164fff8f44b3   17 hours ago    565MB
           mysql                   latest    c5c247418d4e   20 hours ago    604MB
           wordpress               latest    c012b71a41fc   2 months ago    701MB
-===LANJUT===
+===LANJUT DENGAN MEMBUAT DATABASENYA===
+1.Buat 1 file dengan perintah "#touch docker-compose.yaml"
+2.masuk kedalam file tersebut untuk membuat isi databasenya perintah "#vim docker-compose.yaml"
+3.Isi dari databasenya ada di dile 1 lagi nama file "isi database" isinya berada dalam file yang ada di gitgub!.
+4.setelah masuk dalam file "isi database" copy semua isinya!.
+5.copy yang tadi di paste kedalam "#vim docker-compose.yaml"
+6.!jangan lupa untuk merubah pornya sesuai kebutuhan anda!.
+7.lalu sudah selesai copy dan paste database perintah untuk simpan (Shift + (titik dua :) + wq)
+
+===SUDAH MENGINSTALL WORDPRESS DOCKER DAN DATABASE===
+1.Lanjut dengan perintah  (#docker compose up -d) --->ini untuk menjalankan wordpress serta databasenya dan akan membaca file (docker-compose.yaml)
+#docker compose up -d
+WARN[0000] /root/docker-compose.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[+] Running 3/3
+ ✔ Container root-db-1          Running                                                                    0.0s 
+ ✔ Container root-phpmyadmin-1  Running                                                                    0.0s 
+ ✔ Container root-wordpress-1   Running                                                                    0.0s 
+
+===MELIHAT APAKAH WORDPRESS SERTA DATABASE SUDAH RUNNING===
+1.ketikan perintah (#docker ps -a)
+root@DevOps:~# docker ps -a
+CONTAINER ID   IMAGE                   COMMAND                  CREATED       STATUS       PORTS                                     NAMES
+d00d67b76993   wordpress:latest        "docker-entrypoint.s…"   7 hours ago   Up 7 hours   0.0.0.0:8089->80/tcp, [::]:8089->80/tcp   root-wordpress-1
+841862cbfc81   phpmyadmin/phpmyadmin   "/docker-entrypoint.…"   7 hours ago   Up 7 hours   0.0.0.0:8088->80/tcp, [::]:8088->80/tcp   root-phpmyadmin-1
+7f6f66ef0add   mysql:5.7               "docker-entrypoint.s…"   7 hours ago   Up 7 hours   3306/tcp, 33060/tcp                       root-db-1
+
+===SETELAH RUNNING JALANKAN DIHALAM WEB BROWSER ANDA!===
+1.Masukan ip address server anda yaitu 192.168.X.X:8080 
+2.memasukan portnya jangan salah masukan port sesuai dengan port wordpress anda yaitu sesuai kebutuhan anda tadi!.
+
+
